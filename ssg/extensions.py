@@ -7,6 +7,6 @@ def load_module(directory, name):
     importlib.import_module(name)
     sys.path.pop(0)
 
-load_directory(directory):
+def load_directory(directory):
     for path in directory.rglob(".py"):
         load_module(directory.as_posix(), path.stem)
