@@ -1,6 +1,5 @@
 from ssg import hooks, parsers
 
-
 files = []
 
 
@@ -11,3 +10,4 @@ def collect_files(source, site_parsers):
         for path in source.rglob("*"):
             if parser.valid_file_ext(path.suffix):
                 files.append(path)
+
