@@ -31,6 +31,7 @@ class Site:
         self.dest.mkdir(parents=True, exist_ok=True)
         extensions.load_bundled()
         hooks.event("collect_files", self.source, self.parsers)
+        hooks.event("start_build")
         for path in self.source.rglob("*"):
             if path.is_dir():
                 self.create_dir(path)
